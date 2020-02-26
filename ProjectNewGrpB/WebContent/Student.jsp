@@ -18,9 +18,9 @@
 						
 					</form>
 					<tr>
-						<th>Stuid</th>
+						<th>Studentid</th>
 						<th>Name</th>
-						<th>Mark</th>
+						<th>Marks</th>
 						
 
 					</tr>
