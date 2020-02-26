@@ -1,21 +1,28 @@
 package com.newpro.dao;
 
-import java.awt.List;
+
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.newpro.helper.ConnectionFactory;
+import com.newpro.model.Student;
 
 public class StudentDao {
 	
-private static final String SELECT_ALL_USERS = "select * from state";
+private static final String SELECT_ALL_USERS = "select * from student";
 	
-	/*private Connection connection = null;
+	private Connection connection = null;
 	private PreparedStatement statement = null;
 	private ResultSet resultSet = null;
 
 	
 	public List<Student> selectAllUsers(){
-		Student register=null;
+		
 		List<Student> users=new ArrayList<>();
 		
 		try{
@@ -25,10 +32,11 @@ private static final String SELECT_ALL_USERS = "select * from state";
 			resultSet=statement.executeQuery();
 			while(resultSet.next()){
 				
-				Integer stateId=resultSet.getInt("ID");
-				String stateName=resultSet.getString("NAME");
+				String studentName=resultSet.getString("NAME");
+				Integer marks=resultSet.getInt("ID");
 				
-				users.add(new State(stateId, stateName));
+				
+				users.add(new Student(studentName, marks));
 			}
 		}catch(SQLException e){
 			System.out.println(e);
@@ -42,6 +50,6 @@ private static final String SELECT_ALL_USERS = "select * from state";
 		return users;
 		
 	}
-*/
+
 
 }
